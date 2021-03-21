@@ -6,9 +6,13 @@ int max(std::array<std::array<int, maxColumns>, maxRows> array, size_t rows, siz
 	int element;
 	int maxElement = 0;
 	int sum;
-	for (int c=0; c < int(columns); c++) {
+	for (int c = 0; c < int(columns); c++) {
 		for (int r = 0; r < int(rows); r++) {
 			element = array.at(r).at(c);
+			sum = thirdDigitSum(element);
+			if ((sum != 0) && (sum % 2 == 0) && (element > maxElement)) {
+				maxElement = element;
+			}
 		}
 	}
 	return maxElement;
