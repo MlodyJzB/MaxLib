@@ -1,3 +1,4 @@
+//Author: Jakub Cimochowski
 #include <array>
 #include "Max.h"
 
@@ -9,7 +10,7 @@ int max(std::array<std::array<int, maxColumns>, maxRows> array, size_t rows, siz
 		for (int r = 0; r < int(rows); r++) {
 			element = array.at(r).at(c);
 			sum = thirdDigitSum(element);
-			if ((sum != 0) && (sum % 2 == 0) && (element > maxElement)) {
+			if (((sum!=0)||(element/100 > 0)) && (sum % 2 == 0) && (element > maxElement)) {
 				maxElement = element;
 			}
 		}

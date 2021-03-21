@@ -34,6 +34,24 @@ namespace MaxUnitTest
 			int maxElement = max(t, 3, 3);
 			Assert::AreEqual(maxElement, 223);
 		}
+		TEST_METHOD(TestMax3)
+		{
+			std::array<std::array<int, maxColumns>, maxRows> t = { {{121,555555,223},{4,5,625144},{777777,8,999}} };
+			int maxElement = max(t, 3, 3);
+			Assert::AreEqual(maxElement, 777777);
+		}
+		TEST_METHOD(TestMax4)
+		{
+			std::array<std::array<int, maxColumns>, maxRows> t = { {{121,555555,223,444,23222},{4,5,625244,555,12345}} };
+			int maxElement = max(t, 2, 5);
+			Assert::AreEqual(maxElement, 625244);
+		}
+		TEST_METHOD(TestMax5)
+		{
+			std::array<std::array<int, maxColumns>, maxRows> t = { {{121,555555,223,444,23222,1000000,1552}} };
+			int maxElement = max(t, 1, 7);
+			Assert::AreEqual(maxElement, 1000000);
+		}
 	};
 }
 
