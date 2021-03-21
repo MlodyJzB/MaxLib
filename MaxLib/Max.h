@@ -4,3 +4,5 @@
 const size_t maxColumns = 20;
 const size_t maxRows = 20;
 int max(std::array<std::array<int, maxColumns>, maxRows> array, size_t rows, size_t columns);
+
+int thirdDigitSum(int element);
